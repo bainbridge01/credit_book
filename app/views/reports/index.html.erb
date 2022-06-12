@@ -1,0 +1,39 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Reports</h1>
+
+<div id="reports">
+     
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Highlight</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Sale Price</th>
+        <th scope="col">Client</th>
+        <th scope="col">Client Phone</th>
+        <th scope="col">Paid</th>
+      </tr>
+    </thead>
+  
+  <% @reports.each do |report| %>
+    <tbody class="table-secondary">
+      <tr>
+        <th ><%= report.item %></th>
+        <th scope="col"><%= report.highlights %></th>
+        <th scope="col"><%= report.quantity %></th>
+        <th scope="col"><%= report.unit_price %></th>
+        <th scope="col"><%= report.sale_price %></th>
+        <th scope="col"><%= report.client %></th>
+        <th scope="col"><%= report.client_phone %></th>
+        <th scope="col"><%= report.paid %></th>
+        <th scope="col"><td><%= link_to "Show", report %></td></th>
+      </tr>
+    </tbody>
+  <% end %>
+</table>
+</div>
+   
+<%= link_to "New report", new_report_path %>

@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @report %>
+
+<div class="card-body">
+  <%= link_to "Edit", edit_report_path(@report), class: "btn btn-primary" %> |
+  <%= link_to "Back", reports_path, class: "btn btn-success" %> |
+  <%= link_to "Destroy", report_path(@report), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+</div>

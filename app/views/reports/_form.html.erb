@@ -1,0 +1,57 @@
+<%= form_with(model: report) do |form| %>
+  <% if report.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+        <% report.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :item, style: "display: block" %>
+    <%= form.text_field :item %>
+  </div>
+
+  <div>
+    <%= form.label :highlights, style: "display: block" %>
+    <%= form.text_field :highlights %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.label :unit_price, style: "display: block" %>
+    <%= form.number_field :unit_price %>
+  </div>
+
+  <div>
+    <%= form.label :sale_price, style: "display: block" %>
+    <%= form.number_field :sale_price %>
+  </div>
+
+  <div>
+    <%= form.label :client, style: "display: block" %>
+    <%= form.text_field :client %>
+  </div>
+
+  <div>
+    <%= form.label :client_phone, style: "display: block" %>
+    <%= form.number_field :client_phone %>
+  </div>
+
+  <div>
+    <%= form.label :paid, style: "display: block" %>
+    <%= form.check_box :paid %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
