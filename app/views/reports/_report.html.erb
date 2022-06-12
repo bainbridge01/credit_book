@@ -1,0 +1,18 @@
+<div id="<%= dom_id report %>">
+  <div class="card text-dark bg-info mb-3" style="width: 18rem;">
+      <%= image_tag "avatar.jpg", class: "card-img-top", height: 300, alt: "avatar" %>
+    <div class="card-body">
+      <h5 class="card-title"><%= report.item %></h5>
+      <p class="card-text"><%= report.highlights %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Quantity: <%= report.quantity %></li>
+      <li class="list-group-item">Unit Price: <%= report.unit_price %></li>
+      <li class="list-group-item">Sale Price: <%= report.sale_price %></li>
+      <li class="list-group-item">Client: <%= report.client %></li>
+      <li class="list-group-item">Client Phone: <%= report.client_phone %></li>
+      <li class="list-group-item">Paid: <%= report.paid %></li>
+      
+    </ul>
+ </div>
+</div>
